@@ -1,0 +1,38 @@
+\documentclass{scrartcl}	    % Klasse für Artikel
+\usepackage[ngerman]{babel}	% sprachspezifische Übersetzungen
+\usepackage[T1]{fontenc}	    % Umlaute
+\usepackage[utf8]{inputenc}	% Unterstützung erweiterter Eingabe-Zeichensätze
+\usepackage{amsmath}		    % Erweiterungen für mathematischen Formelsatz
+\usepackage{graphicx}        % Einbinden von Bildern
+\usepackage{array}           % vertikale Ausrichtung in Tabellen
+
+\parindent 0mm               % kein Einzug am Absatzbeginn
+\pagestyle{empty}            % keine Seitennummer
+
+\def\uebung{10}              % Definition einer Variable (uebung)
+                             % und Zuweisung eines Wertes (10)
+
+\begin{document}
+
+\input{header}               % Einbinden eines weiteren Dokuments
+
+\section*{Numerische Nullstellensuche: Keplerproblem}
+
+
+\textit{Hinweise}:\\
+
+Der oben angegebene Kopf der Titelseite (zu finden in
+\texttt{header.tex}) sollte so verwendet werden.\\
+
+Die reinen Textbestandteile lassen sich mit Hilfe eines
+pdf-Betrachters aus der Aufgaben-Datei \texttt{U10.pdf} kopieren.\\
+
+Die in der Aufgabenstellung der 10. Übung verwendeten geschweiften
+Klammer unter Formelteilen lassen sich im Mathematik-Modus mittels
+{\verb \underbrace } erzeugen, z.\,B.:
+
+\[
+n^2 - \underbrace{(n-1)^2}_{\text{binom. Formel}} = 2n-1
+\]
+
+\end{document}
