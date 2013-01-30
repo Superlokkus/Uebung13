@@ -1,10 +1,11 @@
-\documentclass{scrartcl}	    % Klasse für Artikel
-\usepackage[ngerman]{babel}	% sprachspezifische Übersetzungen
+\documentclass{scrartcl}	    % Klasse f√ºr Artikel
+\usepackage[utf8]{inputenc}	% Unterst√ºtzung erweiterter Eingabe-Zeichens√§tze
+\usepackage[ngerman]{babel}	% sprachspezifische √úbersetzungen
 \usepackage[T1]{fontenc}	    % Umlaute
-\usepackage[utf8]{inputenc}	% Unterstützung erweiterter Eingabe-Zeichensätze
-\usepackage{amsmath}		    % Erweiterungen für mathematischen Formelsatz
+\usepackage{amsmath}		    % Erweiterungen f√ºr mathematischen Formelsatz
 \usepackage{graphicx}        % Einbinden von Bildern
 \usepackage{array}           % vertikale Ausrichtung in Tabellen
+\usepackage{wrapfig}
 
 \parindent 0mm               % kein Einzug am Absatzbeginn
 \pagestyle{empty}            % keine Seitennummer
@@ -17,22 +18,22 @@
 \input{header}               % Einbinden eines weiteren Dokuments
 
 \section*{Numerische Nullstellensuche: Keplerproblem}
+\emph{Die Bahnen der Planeten um die Sonne sind Ellipsen, in deren einem Brennpunkt die Sonne steht.}
 
+Dieser einfache Sachverhalt führt zu einem analytisch nicht lösbaren Problem, wenn man versucht im System der Sonne, den Betrag des Ortsvektors $\vec{r}$(t) oder auch den Winkel $\phi$(t) des Planeten relativ zur Sonne im Zeitverlauf zu berechnen.
 
-\textit{Hinweise}:\\
+\begin{wrapfigure}{l}{0.5\textwidth}
+\includegraphics[width=0.48\textwidth]{Kepler_Schema.png}
+\end{wrapfigure}
 
-Der oben angegebene Kopf der Titelseite (zu finden in
-\texttt{header.tex}) sollte so verwendet werden.\\
+Die Orts- Zeitfunktion r(t) lässt sich über
+die Zeitabhängigkeit der \textbf{wahren Anomalie
+$\boldsymbol{\phi}$(t)} berechnen, wobei $\boldsymbol{\phi}$\textbf{(t)} der Winkel zwischen der Verbindungslinie Sonne - Perihel und der Linie Sonne - Planet ist.
 
-Die reinen Textbestandteile lassen sich mit Hilfe eines
-pdf-Betrachters aus der Aufgaben-Datei \texttt{U10.pdf} kopieren.\\
+$\mathbf{ r = r(\phi (t)) = r(t) = a \cdot \frac{1-\epsilon^2}{1+\epsilon cos \phi}}$
 
-Die in der Aufgabenstellung der 10. Übung verwendeten geschweiften
-Klammer unter Formelteilen lassen sich im Mathematik-Modus mittels
-{\verb \underbrace } erzeugen, z.\,B.:
+mit
 
-\[
-n^2 - \underbrace{(n-1)^2}_{\text{binom. Formel}} = 2n-1
-\]
+$\phi$ 
 
 \end{document}
