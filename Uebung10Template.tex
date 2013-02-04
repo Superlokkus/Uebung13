@@ -29,11 +29,26 @@ Dieser einfache Sachverhalt führt zu einem analytisch nicht lösbaren Problem, 
 Die Orts- Zeitfunktion r(t) lässt sich über
 die Zeitabhängigkeit der \textbf{wahren Anomalie
 $\boldsymbol{\phi}$(t)} berechnen, wobei $\boldsymbol{\phi}$\textbf{(t)} der Winkel zwischen der Verbindungslinie Sonne - Perihel und der Linie Sonne - Planet ist.
-
-$\mathbf{ r = r(\phi (t)) = r(t) = a \cdot \frac{1-\epsilon^2}{1+\epsilon cos \phi}}$
+\[
+\mathbf{ r = r(\boldsymbol{\phi} (t)) = r(t) = a \cdot \frac{1-\boldsymbol{\epsilon}^2}{1+\boldsymbol{\epsilon} cos \boldsymbol{\phi}}}
+\]
 
 mit
 
-$\phi$ 
+\begin{description}
+\item $\boldsymbol{\phi}$ -- wahre Anommalie
+\item $\boldsymbol{\epsilon}$ -- numerische Exzentrität
+\item $\boldsymbol{\epsilon}$ = $\frac{e}{a} = \sqrt{1-{(\frac{b}{a})}^2}$
+\item \textbf{e} -- lineare Exzentrizität
+\item \textbf{e} = $\sqrt{a^2 - b^2}$
+\item \textbf{a} -- große Halbachse der Bahn-Ellipse
+\item \textbf{b} -- kleine Halbachse der Bahn-Ellipse
+\end{description}
+Die wahre Anomalie ist berechenbar aus der \textbf{exzentrischen Anomalie E} (Winkel vom Mittelpunkt der Ellipse zu einem Hilfspunkt auf dem Umkreis mit Radius der großen Halbachse (Projektion des Planetenortes auf den Umkreis) relativ zur Verbindungslinie Mittelpunkt - Perihel)
+
+\[
+\phi = \underbrace{2\pi - \underbrace{arccos(\frac{cos E-\epsilon}{1-\epsilon cos E})}_{0 \le E \le \pi}}_{\pi \le E \le 2\pi}
+\]
+
 
 \end{document}
